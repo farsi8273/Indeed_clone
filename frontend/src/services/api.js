@@ -1,7 +1,7 @@
 // api.js
 import axios from 'axios';
 
-const API_BASE_URL = process.env.ALLOWED_ORIGIN; // Replace with your API base URL
+const API_BASE_URL = 'hhttps://backend-green-six-92.vercel.app'; // Replace with your API base URL
 
 // Function to get all jobs
 export const getJobs = async (queryParams = {}) => {
