@@ -1,12 +1,12 @@
 // authService.js
 import axios from 'axios';
 
-const AUTH_BASE_URL = 'http://localhost:3000/api/users'; // Replace with your auth base URL
+const AUTH_BASE_URL = process.env.ALLOWED_ORIGIN; // Replace with your auth base URL
 
 // Function to log in a user
 export const loginUser = async (credentials) => {
   try {
-    const response = await axios.post(`${AUTH_BASE_URL}/login`, credentials);
+    const response = await axios.post(`${AUTH_BASE_URL}/api/users/login`, credentials);
     // Assuming the token is in the response data
     localStorage.setItem('token', response.data.token);
     return response.data;
@@ -19,7 +19,7 @@ export const loginUser = async (credentials) => {
 // Function to sign up a user
 export const signupUser = async (userData) => {
   try {
-    const response = await axios.post(`${AUTH_BASE_URL}/signup`, userData);
+    const response = await axios.post(`${AUTH_BASE_URL}/api/users/signup`, userData);
     // Assuming the token is in the response data
     localStorage.setItem('token', response.data.token);
     return response.data;
@@ -40,7 +40,7 @@ export const getCurrentUser = async () => {
     const token = localStorage.getItem('token');
     if (!token) throw new Error('No token found');
     
-    const response = await axios.get(`${AUTH_BASE_URL}/me`, {
+    const response = await axios.get(`${AUTH_BASE_URL}/api/users/me`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     return response.data;

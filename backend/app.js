@@ -13,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: process.env.ALLOWED_ORIGIN,
 }));
 // Middleware
 app.use(express.json()); // To parse JSON bodies
