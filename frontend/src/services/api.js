@@ -1,10 +1,10 @@
 // api.js
 import axios from 'axios';
 
-const dotenv = require('dotenv');
-dotenv.config();
-const AUTH_BASE_URL = process.env.AUTH_BASE_URL; 
+// const dotenv = require('dotenv');
+// dotenv.config();
 
+const AUTH_BASE_URL = "https://backend-green-six-92.vercel.app"; 
 // Function to get all jobs
 export const getJobs = async (queryParams = {}) => {
   try {
