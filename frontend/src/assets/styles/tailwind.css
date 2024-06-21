@@ -1,0 +1,12 @@
+/* tailwind.css */
+
+/* Tailwind CSS base styles */
+@tailwind base;
+
+/* Tailwind CSS components */
+@tailwind components;
+
+/* Tailwind CSS utilities */
+@tailwind utilities;
+
+/* Custom Tailwind configurations or overrides (optional) */
