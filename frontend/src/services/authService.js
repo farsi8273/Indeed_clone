@@ -1,7 +1,7 @@
 // authService.js
 import axios from 'axios';
 
-const AUTH_BASE_URL = process.env.ALLOWED_ORIGIN; // Replace with your auth base URL
+const AUTH_BASE_URL = process.env.AUTH_BASE_URL; // Replace with your auth base URL
 
 // Function to log in a user
 export const loginUser = async (credentials) => {
