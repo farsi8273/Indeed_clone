@@ -1,7 +1,8 @@
 // authService.js
 import axios from 'axios';
-
-const AUTH_BASE_URL = "https://backend-green-six-92.vercel.app"; // Replace with your auth base URL
+const dotenv = require('dotenv');
+dotenv.config();
+const AUTH_BASE_URL = process.env.AUTH_BASE_URL; // Replace with your auth base URL
 
 // Function to log in a user
 export const loginUser = async (credentials) => {

@@ -32,7 +32,6 @@ exports.signup = async (req, res) => {
 exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
-    console.log('Login request body:', req.body); // Log the request body
 
     if (!email || !password) {
       console.log('Email or password is missing'); // Log missing fields
