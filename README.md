@@ -1,6 +1,8 @@
 
 # Indeed ! Find great places to work
 
+![indeed3](https://github.com/farsi8273/Indeed_clone/assets/145118761/1ae28eab-1c7c-4013-97af-49ff3782f08b)
+
 
 # Links:
 
