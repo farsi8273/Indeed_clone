@@ -7,10 +7,10 @@ const validateSignupInput = require('../middleware/validateSignupInput');
 const validateLoginInput = require('../middleware/validateLoginInput');
 
 // Route for user signup - Corrected
-router.post('/signup', userController.signup);
+router.post('/signup', validateSignupInput, userController.signup);
 
 // Route for user login - Corrected
-router.post('/login',  userController.login);
+router.post('/login', validateLoginInput, userController.login);
 
 
 

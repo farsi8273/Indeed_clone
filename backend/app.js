@@ -4,10 +4,10 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const userRoutes = require('./routes/user');
+
 const productRoutes = require('./routes/product');
 const errorHandler = require('./middleware/errorHandler');
 const cors = require('cors');
-const { login, signup } = require('./controllers/userController');
 dotenv.config();
 
 const app = express();
