@@ -10,16 +10,16 @@ router.get('/', productController.getAllProducts);
 // Route to get a single product by ID
 router.get('/:id', productController.getProductById);
 
-// Route to add a new product
+// Route to add a new product, requires authentication
 router.post('/', auth, productController.addProduct);
 
-// Route to update a product by ID
+// Route to update a product by ID, requires authentication
 router.put('/:id', auth, productController.updateProduct);
 
-// Route to delete a product by ID
+// Route to delete a product by ID, requires authentication
 router.delete('/:id', auth, productController.deleteProduct);
 
-// Route to bookmark a product
+// Route to bookmark a product, requires authentication
 router.post('/bookmark', auth, productController.bookmarkProduct);
 
 module.exports = router;
