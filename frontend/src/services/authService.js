@@ -3,18 +3,18 @@ import axios from 'axios';
 // const dotenv = require('dotenv');
 // dotenv.config();
 // const AUTH_BASE_URL = process.env.AUTH_BASE_URL; // Replace with your auth base URL
-const AUTH_BASE_URL ="https://backend-green-six-92.vercel.app"; 
+const AUTH_BASE_URL ="http://localhost:3000"; 
 
 // Function to log in a user
 export const loginUser = async (credentials) => {
-  try {
+  try { 
     const response = await axios.post(`${AUTH_BASE_URL}/api/users/login`, credentials);
     // Assuming the token is in the response data
     localStorage.setItem('token', response.data.token);
     return response.data;
   } catch (error) {
-    console.error('Error logging in:', error);
-    throw error;
+    console.error('Error logging in:',  error.response ? error.response.data.message : error.message);
+    throw error.response ? error.response.data : error.message;
   }
 };
 
@@ -26,8 +26,8 @@ export const signupUser = async (userData) => {
     localStorage.setItem('token', response.data.token);
     return response.data;
   } catch (error) {
-    console.error('Error signing up:', error);
-    throw error;
+    console.error('Error signing up:', error.response ? error.response.data.message : error.message);
+    throw error.response ? error.response.data : error.message;
   }
 };
 
@@ -47,8 +47,8 @@ export const getCurrentUser = async () => {
     });
     return response.data;
   } catch (error) {
-    console.error('Error fetching current user:', error);
-    throw error;
+    console.error('Error fetching current user:', error.response ? error.response.data : error.message);
+    throw error.response ? error.response.data : error.message;
   }
 };
 

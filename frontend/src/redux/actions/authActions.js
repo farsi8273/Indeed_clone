@@ -48,4 +48,3 @@ export const fetchCurrentUser = () => async (dispatch) => {
     dispatch({ type: LOGIN_FAILURE, payload: error.message });
   }
 };
-

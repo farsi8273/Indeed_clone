@@ -30,6 +30,7 @@ exports.signup = async (req, res) => {
 
 // User login
 exports.login = async (req, res) => {
+
   try {
     const { email, password } = req.body;
 
@@ -41,13 +42,12 @@ exports.login = async (req, res) => {
     const user = await User.findOne({ email });
     if (!user) {
       console.log('User not found for email:', email); // Log if user is not found
-      return res.status(400).json({ message: 'Invalid credentials' });
+      return res.status(400).json({ message: 'User not found for email' });
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      console.log('Invalid password for email:', email); // Log if password does not match
-      return res.status(400).json({ message: 'Invalid credentials' });
+      return res.status(400).json({ message: 'Invalid Password' });
     }
 
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
