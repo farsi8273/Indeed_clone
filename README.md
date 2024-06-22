@@ -1,6 +1,6 @@
 
 # Indeed ! Find great places to work
-![indeed](https://github.com/farsi8273/Indeed_clone/assets/145118761/52619334-ab72-45ff-8686-229cc8067699)
+
 
 # Links:
 
@@ -11,27 +11,31 @@ Indeed is the #1 job site in the world with over 350M+ unique visitors every mon
 
 # Home Page of the Project:
 
-![home](https://github.com/farsi8273/Indeed_clone/assets/145118761/b1873c1f-9e2f-468e-ac25-b89b1e968c1d)
+
+![home](https://github.com/farsi8273/Indeed_clone/assets/145118761/cc61cab4-83cc-4938-a49f-3a7b68b36dc1)
+
 
 # Company Reviews Page:
 
-![company reviews](https://github.com/farsi8273/Indeed_clone/assets/145118761/21d4a889-a6cc-4bfe-ba12-d5389ed47643)
+
+![salary](https://github.com/farsi8273/Indeed_clone/assets/145118761/4e69ae91-cb17-4dea-9058-be68109bf435)
+
 
 # Salary Guide Page:
 
-![salary guide](https://github.com/farsi8273/Indeed_clone/assets/145118761/e79afdf1-9d2c-4e87-a7ba-72851117362a)
 
-# Footer One:
+![company](https://github.com/farsi8273/Indeed_clone/assets/145118761/9cb39ba6-1941-4734-afc7-0b1a2402c79b)
 
-![Footer A](https://github.com/farsi8273/Indeed_clone/assets/145118761/b72fde35-4f17-451e-98f3-859e588d212d)
 
-# Footer Two:
+# Footer 
 
-![Footer B](https://github.com/farsi8273/Indeed_clone/assets/145118761/e20e8b0e-0838-4252-8e6a-707560d8b6dc)
+![footer2](https://github.com/farsi8273/Indeed_clone/assets/145118761/3ec470af-9b0d-4ac2-bae9-c417ec5a261e)
+
 
 # Sign In:
 
-![sign in](https://github.com/farsi8273/Indeed_clone/assets/145118761/2cd2612a-16fa-43d1-b66b-96fcf64a7b35)
+
+![login](https://github.com/farsi8273/Indeed_clone/assets/145118761/ac4e4c4d-d2b6-44bd-8534-66e885194c99)
 
 # Technologies Used:
 
