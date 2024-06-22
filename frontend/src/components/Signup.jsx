@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect  } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom'; 
 import { signup } from '../redux/actions/authActions';
 import { FcGoogle } from 'react-icons/fc';
 import { FaApple } from 'react-icons/fa';
@@ -8,15 +9,23 @@ const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const loading = useSelector((state) => state.auth.loading);
   const error = useSelector((state) => state.auth.error);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(signup({ name, email, password }));
+
   };
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/'); // Redirect to the homepage
+    }
+  }, [isAuthenticated, navigate]);
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">

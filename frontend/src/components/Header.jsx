@@ -1,11 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { Link,useNavigate  } from 'react-router-dom';
+import { useSelector,useDispatch  } from 'react-redux';
 import { FaBell, FaCommentDots, FaUser } from 'react-icons/fa';
+import { logout } from '../redux/actions/authActions';
 import '../App.css'
 
 const Header = () => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleSignout = () => {
+    dispatch(logout());
+    navigate('/'); // Redirect to homepage after signout
+  };
 
   return (
     <header className="flex justify-between items-center py-4 px-8 border-b-2 border-gray-200 bg-white">
@@ -23,7 +30,8 @@ const Header = () => {
               <FaCommentDots className="icon" />
             <FaBell className="icon" />
             <Link to="/profile"><FaUser className="icon" /></Link>
-            
+            {/* <Link to="/login" className="nav-link text-blue-700">Signout</Link> */}
+            <button onClick={handleSignout} className="nav-link text-blue-700">Signout</button>
           </>
         ) : (
           <>
